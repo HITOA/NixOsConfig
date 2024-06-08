@@ -1,1 +1,1 @@
-echo ${nixos-generate-config --show-hardware-config} >> hardware-config.nix
+nixos-generate-config --show-hardware-config >> hardware-config.nix
