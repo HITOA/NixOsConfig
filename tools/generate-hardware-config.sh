@@ -1,0 +1,1 @@
+echo ${nixos-generate-config --show-hardware-config} >> hardware-config.nix
