@@ -1,5 +1,3 @@
-#!/bin/bash
-
 hardware_config=$(nixos-generate-config --show-hardware-config)
 
 for dir in ./profiles/*
