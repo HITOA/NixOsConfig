@@ -15,5 +15,8 @@ first run of startvm.sh use the -i argument
 - mount boot partition to /mnt/boot
 - swapon swap partition
 - nixos-generate-config --root /mnt
-- setup boot device and other configuration stuff in /mnt/etc/nixos/configuration.nix
-- once configuration is done, go to /mnt and nixos-install
+- nix shell nixpkgs#git to get git
+- clone git repo (nix config) where you want it to be
+- run tools/generate-hardware-config.sh from repos root
+- git add the generated hardware-configuration
+- install with flake

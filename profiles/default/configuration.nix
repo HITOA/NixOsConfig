@@ -28,9 +28,9 @@
     LC_TIME = "fr_FR.UTF-8";
   };
 
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "fr";
-    xkbVariant = "";
+    variant = "";
   };
   console.keyMap = "fr";
 
