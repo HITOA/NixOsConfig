@@ -15,7 +15,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in
   {
-    nixosConfiguration = {
+    nixosConfigurations = {
 
       default = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
