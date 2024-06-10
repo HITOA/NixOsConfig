@@ -53,7 +53,7 @@
   };
 
   home-manager = {
-    specialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs; };
     users = {
       HITO = import ./home.nix;
     };
