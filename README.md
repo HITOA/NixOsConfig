@@ -16,7 +16,7 @@ first run of startvm.sh use the -i argument
 - swapon swap partition
 - nixos-generate-config --root /mnt
 - nix shell nixpkgs#git to get git
-- clone git repo (nix config) where you want it to be
+- git clone repos . in /etc/nixos directory
 - run tools/generate-hardware-config.sh from repos root
 - git add the generated hardware-configuration
 - install with flake

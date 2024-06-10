@@ -1,9 +1,22 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
+
+  config.modulesPath = "../../modules"
 
   imports = [
     ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+    ${config.modulesPath}/hyprland.nix
   ];
+
+  environment.sessionVariables = {
+    FLAKE = "/etc/nixos";
+  };
+
+  environment.systemPackages = [
+    pkgs.git
+    pkgs.nh
+  ]
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -38,6 +51,13 @@
     HITO = {
       isNormalUser = true;
       extraGroups = [ "networkmanager" "wheel" ];
+    };
+  };
+
+  home-manager = {
+    specialArgs = { inherit inputs; };
+    users = {
+      HITO = import ./home.nix;
     };
   };
 
