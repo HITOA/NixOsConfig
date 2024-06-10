@@ -1,7 +1,7 @@
 { config, lib, pkgs, inputs, ... }:
 {
 
-  config.modulesPath = "../../modules"
+  config.modulesPath = "../../modules";
 
   imports = [
     ./hardware-configuration.nix
@@ -16,7 +16,7 @@
   environment.systemPackages = [
     pkgs.git
     pkgs.nh
-  ]
+  ];
 
   boot.loader = {
     systemd-boot.enable = true;
