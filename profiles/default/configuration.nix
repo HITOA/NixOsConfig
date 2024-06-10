@@ -59,5 +59,10 @@
     };
   };
 
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    auto-optimise-store = lib.mkDefault true;
+  };
+
   system.stateVersion = "24.05";
 }
