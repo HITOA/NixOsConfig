@@ -1,12 +1,10 @@
 { config, lib, pkgs, inputs, ... }:
 {
 
-  config.modulesPath = "../../modules";
-
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ${config.modulesPath}/hyprland.nix
+    ../../hyprland.nix
   ];
 
   environment.sessionVariables = {
