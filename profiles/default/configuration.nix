@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
-    ../../hyprland.nix
+    ../../modules/hyprland.nix
   ];
 
   environment.sessionVariables = {
