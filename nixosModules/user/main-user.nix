@@ -7,7 +7,7 @@
     };
     homemanagerConfig = lib.mkOption {
       default = "";
-    }
+    };
   };
 
   config = lib.mkIf config.mainUser.enable {

@@ -21,7 +21,7 @@
         System keyboard layout.
       '';
     };
-  }
+  };
 
   config = {
     time.timeZone = "Europe/Paris";
