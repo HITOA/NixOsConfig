@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 {
   options.mainUser = {
     enable = lib.mkEnableOption "enable main user.";
