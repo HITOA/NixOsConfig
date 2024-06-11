@@ -18,10 +18,10 @@
 
   config = {
     nix.settings.auto-optimise-store = config.nix.storage.optimize;
-    nix.gc = lib.mkIf config.nix.storage.gc.enable {
+    nix.gc = lib.mkIf config.nix.gc.enable {
       automatic = true;
-      dates = config.nix.storage.gc.interval;
-      options = "--delete-older-than ${config.nix.storage.gc.olderThan}";
+      dates = config.nix.gc.interval;
+      options = "--delete-older-than ${config.nix.gc.olderThan}";
     };
   };
 }
