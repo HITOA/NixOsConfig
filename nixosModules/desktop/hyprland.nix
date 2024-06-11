@@ -2,7 +2,6 @@
 {
   options.hyprland = {
     enable = lib.mkEnableOption "Enable hyprland compositor.";
-    
   };
 
   config = lib.mkIf config.hyprland.enable {

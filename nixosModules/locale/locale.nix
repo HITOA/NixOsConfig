@@ -21,6 +21,13 @@
         System keyboard layout.
       '';
     };
+
+    locale.keyboardVariant = lib.mkOption {
+      default = "";
+      description = ''
+        System keyboard variant.
+      '';
+    };
   };
 
   config = {
@@ -40,6 +47,7 @@
     };
 
     services.xserver.xkb.layout = config.locale.keyboardLayout;
+    services.xserver.xkb.variant = config.locale.keyboardVariant;
     console.keyMap = config.locale.keyboardLayout;
   };
 }
