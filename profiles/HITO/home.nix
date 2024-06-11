@@ -6,6 +6,7 @@
   home.homeDirectory = "/home/HITO";
 
   applications.zellij.enable = true;
+  applications.kitty.enable = true;
 
   hyprland.enable = true;
   hyprland.binding.mainMod = "Control_L";
