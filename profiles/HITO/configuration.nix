@@ -35,6 +35,12 @@
     username = "HITO";
     homemanagerConfig = import ./home.nix;
   };
+
+  hardware.opengl = {
+    enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+  };
   
   system.stateVersion = "24.05";
 }
