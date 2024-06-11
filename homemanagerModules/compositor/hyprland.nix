@@ -22,9 +22,7 @@
       };
 
       #BINDING
-      bind = [
-        lib.mkIf config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}"
-      ];
+      bind = lib.optional config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}";
 
     };
   };
