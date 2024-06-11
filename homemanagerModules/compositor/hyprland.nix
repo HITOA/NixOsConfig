@@ -4,7 +4,7 @@
     enable = lib.mkEnableOption "Enable hyprland compositor.";
     binding = {
       mainMod = lib.mkOption {
-        default = "SUPER";
+        default = "Super";
       };
     };
   };

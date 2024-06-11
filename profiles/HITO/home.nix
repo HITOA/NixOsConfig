@@ -8,6 +8,7 @@
   applications.kitty.enable = true;
 
   hyprland.enable = true;
+  hyprland.binding.mainMod = "Control_L";
 
   home.stateVersion = "24.05";
 
