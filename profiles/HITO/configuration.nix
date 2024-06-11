@@ -34,6 +34,8 @@
     username = "HITO";
     homemanagerConfig = import ./home.nix;
   };
+
+  hyprland.enable = true;
   
   system.stateVersion = "24.05";
 }
