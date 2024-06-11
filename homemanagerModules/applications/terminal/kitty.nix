@@ -10,6 +10,6 @@
     };
 
     terminalEmulator.enable = true;
-    terminalEmulator.binary = "${programs.kitty.package}/bin/kitty";
+    terminalEmulator.binary = "${pkgs.kitty}/bin/kitty";
   };
 }
