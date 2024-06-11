@@ -17,12 +17,12 @@
       #INPUT
       input = {
         kb_layout = nixosConfig.locale.keyboardLayout;
-        #kb_variant = nixosConfig.locale.keyboardVariant;
+        kb_variant = nixosConfig.locale.keyboardVariant;
         follow_mouse = "1";
       };
 
       #BINDING
-      bind = lib.optional config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}";
+      bind = lib.optional config.applications.terminal.enable "${config.hyprland.binding.mainMod}, A, exec, ${config.applications.terminal.binary}";
 
     };
   };
