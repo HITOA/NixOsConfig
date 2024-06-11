@@ -18,12 +18,13 @@
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    outputs = inputs.self.outputs;
   in
   {
     nixosConfigurations = {
 
       HITO = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs inputs.self.outputs; };
+        specialArgs = { inherit inputs outputs; };
         modules = [ 
           ./profiles/HITO/configuration.nix
           inputs.home-manager.nixosModules.default
