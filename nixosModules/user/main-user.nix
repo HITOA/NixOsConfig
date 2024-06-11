@@ -1,4 +1,4 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, lib, config, inputs, outputs, ... }:
 {
   options.mainUser = {
     enable = lib.mkEnableOption "enable main user.";
@@ -17,7 +17,7 @@
     };
 
     home-manager = {
-      extraSpecialArgs = { inherit inputs; };
+      extraSpecialArgs = { inherit inputs outputs; };
       users.${config.mainUser.username} = config.mainUser.homemanagerConfig;
     };
   };
