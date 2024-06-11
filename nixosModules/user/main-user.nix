@@ -17,7 +17,7 @@
     };
 
     home-manager = {
-      extraSpecialArgs = { inputs = inputs; nixosConfig = config; };
+      extraSpecialArgs = { inherit inputs; };
       users.${config.mainUser.username} = config.mainUser.homemanagerConfig;
     };
   };

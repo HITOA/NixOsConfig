@@ -1,4 +1,6 @@
 { ... }:
 {
-  
+  imports = [
+    "./desktop/hyprland.nix"
+  ];
 }
