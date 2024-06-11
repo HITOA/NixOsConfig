@@ -1,6 +1,6 @@
 { pkgs, lib, config, inputs, ... }:
 {
-  /*options.hyprland = {
+  options.hyprland = {
     binding = {
       mainMod = lib.mkOption {
         default = "SUPER";
@@ -26,5 +26,5 @@
 
       };
     };
-  };*/
+  };
 }
