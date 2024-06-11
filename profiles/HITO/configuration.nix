@@ -20,6 +20,8 @@
     efi.canTouchEfiVariables = true;
   };
 
+  hardware.nvidia.enable = true;
+
   networking.hostName = "HITO";
   networking.networkmanager.enable = true;
 
@@ -34,12 +36,6 @@
     enable = true;
     username = "HITO";
     homemanagerConfig = import ./home.nix;
-  };
-
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
   };
   
   system.stateVersion = "24.05";
