@@ -8,17 +8,18 @@
     };
   };
 
-  config = lib.mkIf hyprland.enable {
+  config = lib.mkIf config.hyprland.enable {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
         #INPUT
         input = {
-          kb_layout = locale.keyboardLayout;
-          kb_variant = locale.keyboardVariant;
+          kb_layout = config.locale.keyboardLayout;
+          kb_variant = config.locale.keyboardVariant;
           follow_mouse = "1";
         };
 
+        #BINDING
         bind = [
           "${config.hyprland.binding.mainMod}, Q, exec, kitty"
         ];
