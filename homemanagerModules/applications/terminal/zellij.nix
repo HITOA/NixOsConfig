@@ -10,8 +10,8 @@
     };
 
     applications.terminal = {
-      enable = true;
-      binary = "${pkgs.zellij}/bin/zellij";
+      #enable = true;
+      #binary = "${pkgs.zellij}/bin/zellij";
     };
   };
 }
