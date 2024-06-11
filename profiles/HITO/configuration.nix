@@ -26,16 +26,14 @@
   locale.lang = "fr_FR.UTF-8";
   locale.keyboardLayout = "fr";
 
+  nix.storage.optimize = true;
+  nix.gc.enable = true;
+
   mainUser = {
     enable = true;
     username = "HITO";
     homemanagerConfig = import ./home.nix;
   };
-
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-    auto-optimise-store = lib.mkDefault true;
-  };
-
+  
   system.stateVersion = "24.05";
 }
