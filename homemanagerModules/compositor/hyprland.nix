@@ -10,8 +10,6 @@
   };
 
   config.wayland.windowManager.hyprland = lib.mkIf config.hyprland.enable {
-    terminalEmulator.enable = lib.mkDefault false;
-
     enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     
@@ -25,7 +23,7 @@
 
       #BINDING
       bind = [
-        lib.mkIf config.terminalEmulator.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.terminalEmulator.binary}"
+        lib.mkIf config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}"
       ];
 
     };
