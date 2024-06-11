@@ -1,4 +1,4 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, lib, config, inputs, nixosConfig, ... }:
 {
   options.hyprland = {
     binding = {
@@ -8,14 +8,14 @@
     };
   };
 
-  config = lib.mkIf hyprland.enable {
+  config = lib.mkIf nixosConfig.hyprland.enable {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
         #INPUT
         input = {
-          kb_layout = locale.keyboardLayout;
-          kb_variant = locale.keyboardVariant;
+          kb_layout = nixosConfig.locale.keyboardLayout;
+          kb_variant = nixosConfig.locale.keyboardVariant;
           follow_mouse = "1";
         };
 
