@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 {
   options.hardware.nvidia = {
-    enable = lib.mkOptionEnable "Enable nvidia hardware.";
+    enable = lib.mkEnableOption "Enable nvidia hardware.";
   };
 
   config = lib.mkIf config.hardware.nvidia.enable {
