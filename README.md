@@ -14,7 +14,6 @@ first run of startvm.sh use the -i argument
 - mkdir -p /mnt/boot
 - mount boot partition to /mnt/boot
 - swapon swap partition
-- nixos-generate-config --root /mnt
 - nix shell nixpkgs#git to get git
 - git clone repos . in /etc/nixos directory
 - run tools/generate-hardware-config.sh from repos root
