@@ -4,7 +4,9 @@
 
   home.username = "HITO";
   home.homeDirectory = "/home/HITO";
-  
+
+  applications.kitty.enable = true;
+
   hyprland.enable = true;
 
   home.stateVersion = "24.05";

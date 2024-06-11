@@ -1,6 +1,6 @@
 { ... }:
 {
   imports = [
-    ./desktop/hyprland.nix
+    ./compositor/hyprland.nix
   ];
 }
