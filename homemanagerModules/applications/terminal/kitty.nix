@@ -11,7 +11,7 @@
 
     applications.terminal = {
       enable = true;
-      binary = "kitty";
+      binary = "${pkgs.kitty}/bin/kitty";
     };
   };
 }
