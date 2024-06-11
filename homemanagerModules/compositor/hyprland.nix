@@ -22,7 +22,10 @@
       };
 
       #BINDING
-      bind = lib.optional config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}";
+      bind = [
+        ",F12,togglespecialworkspace"
+      ] ++
+        lib.optional config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}";
 
       exec-once = [
         "[workspace special; size 100% 100%;move 12.5% 40] ${${config.applications.terminal.binary}} ${lib.mkIf config.applications.zellij.enable "zellij"}"
