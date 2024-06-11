@@ -23,15 +23,16 @@
     nixosConfigurations = {
 
       HITO = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs outputs; };
         modules = [ 
           ./profiles/HITO/configuration.nix
           inputs.home-manager.nixosModules.default
-          ./nixosModules/default.nix
-          ./homemanagerModules/default.nix
         ];
       };
       
     };
+
+    nixosModules.default = ./nixosModules;
+    homemanagerModules.default = ./homemanagerModules;
   };
 }

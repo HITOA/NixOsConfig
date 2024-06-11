@@ -1,5 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, outputs, ... }:
 {
+  imports = [ outputs.homemanagerModules.default ];
+
   home.username = "HITO";
   home.homeDirectory = "/home/HITO";
 
