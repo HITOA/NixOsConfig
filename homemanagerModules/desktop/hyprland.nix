@@ -10,7 +10,7 @@
 
   config = lib.mkIf nixosConfig.hyprland.enable {
     wayland.windowManager.hyprland = {
-      enable = true;
+      #enable = true;
       settings = {
         #INPUT
         input = {
