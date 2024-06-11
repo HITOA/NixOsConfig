@@ -9,7 +9,9 @@
       enable = true;
     };
 
-    terminalEmulator.enable = true;
-    terminalEmulator.binary = "${pkgs.kitty}/bin/kitty";
+    terminalEmulator = {
+      enable = true;
+      binary = "${pkgs.kitty}/bin/kitty";
+    };
   };
 }
