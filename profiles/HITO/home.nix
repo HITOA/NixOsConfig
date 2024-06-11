@@ -5,7 +5,7 @@
   home.username = "HITO";
   home.homeDirectory = "/home/HITO";
 
-  applications.kitty.enable = true;
+  applications.zellij.enable = true;
 
   hyprland.enable = true;
   hyprland.binding.mainMod = "Control_L";
