@@ -7,5 +7,6 @@
     ./applications/terminal/zellij.nix
     ./applications/ide/codium.nix
     ./applications/launcher/wofi.nix
+    ./applications/browser/vivaldi.nix
   ];
 }
