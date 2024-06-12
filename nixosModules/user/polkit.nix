@@ -8,5 +8,12 @@
     environment.systemPackages = [
       pkgs.polkit_gnome
     ];
+
+    systemd.services.polkit = {
+      enable = true;
+      serviceConfig = {
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+      };
+    };
   };
 }
