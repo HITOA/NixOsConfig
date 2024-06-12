@@ -4,7 +4,9 @@
 
   home.username = "HITO";
   home.homeDirectory = "/home/HITO";
-
+  
+  applications.wofi.enable = true;
+  applications.codium.enable = true;
   applications.zellij.enable = true;
   applications.kitty.enable = true;
 
