@@ -5,7 +5,7 @@
   };
 
   config = lib.mkIf config.applications.vivaldi.enable {
-    environment.systemPackages = [
+    home.packages = [
       pkgs.vivaldi
     ];
   };
