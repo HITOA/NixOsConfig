@@ -9,11 +9,11 @@
       pkgs.polkit_gnome
     ];
 
-    systemd.services.polkit = {
+    systemd.user.services.polkit = {
       enable = true;
       serviceConfig = {
         Type = "simple";
-        ExecStart = "echo hello world";
+        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
       };
     };
   };
