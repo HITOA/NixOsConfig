@@ -6,7 +6,7 @@
 
   config = lib.mkIf config.polkit.enable {
     environment.systemPackages = [
-      pkgs.lxqt.lxqt-policykit
+      pkgs.lxde.lxsession
     ];
 
     systemd.user.services.polkit-agent = {
@@ -16,7 +16,7 @@
       after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.lxqt.lxqt-policykit}/bin/lxqt-policykit-agent";
+        ExecStart = "${pkgs.lxde.lxsession}/bin/lxpolkit";
       };
     };
   };
