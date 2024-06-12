@@ -16,7 +16,7 @@
       after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.polkit}/bin/polkit";
+        ExecStart = "${pkgs.polkit}/bin/pkttyagent";
       };
     };
   };
