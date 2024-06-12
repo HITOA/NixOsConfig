@@ -28,6 +28,8 @@
           "ALT, F4, killactive"
           "ALT SHIFT, F4, exit"
           "${config.hyprland.binding.mainMod}, V, togglefloating"
+          "${config.hyprland.binding.mainMod}, mouse:272, movewindow"
+          "${config.hyprland.binding.mainMod}, mouse:273, resizewindow"
         ] ++
           lib.optional config.applications.terminal.enable "${config.hyprland.binding.mainMod}, Q, exec, ${config.applications.terminal.binary}" ++
           lib.optional config.applications.launcher.enable "${config.hyprland.binding.mainMod}, SPACE, exec, ${config.applications.launcher.binary}" ++
@@ -39,7 +41,7 @@
                   builtins.toString (x + 1 - (c * 10));
               in [
                 "$mod, ${ws}, workspace, ${toString (x + 1)}"
-                "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+                "$mod ${config.hyprland.binding.mainMod}, ${ws}, movetoworkspace, ${toString (x + 1)}"
               ]
             )
             10);
