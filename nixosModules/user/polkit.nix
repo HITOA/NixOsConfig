@@ -6,7 +6,7 @@
 
   config = lib.mkIf config.polkit.enable {
     environment.systemPackages = [
-      pkgs.libsForQt5.polkit-qt
+      pkgs.kdePackages.polkit-qt-1
     ];
 
     systemd.user.services.polkit-agent = {
@@ -16,7 +16,7 @@
       after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.libsForQt5.polkit-qt}/bin/polkitagent";
+        ExecStart = "${pkgs.kdePackages.polkit-qt-1}/bin/polkitagent";
       };
     };
   };
