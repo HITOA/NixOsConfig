@@ -13,7 +13,7 @@
       enable = true;
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
+        ExecStart = "echo hello world";
       };
     };
   };
