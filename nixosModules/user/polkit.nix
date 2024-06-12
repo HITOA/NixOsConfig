@@ -6,7 +6,7 @@
 
   config = lib.mkIf config.polkit.enable {
     environment.systemPackages = [
-      pkgs.lxde.lxsession
+      pkgs.kdePackages.polkit-kde-agent-1
     ];
 
     systemd.user.services.polkit-agent = {
@@ -16,7 +16,7 @@
       after = [ "graphical-session.target" ];
       serviceConfig = {
         Type = "simple";
-        ExecStart = "${pkgs.lxde.lxsession}/bin/lxpolkit";
+        ExecStart = "${pkgs.kdePackages.polkit-kde-agent-1}/lib/polkit-kde-authentication-agent-1";
       };
     };
   };
