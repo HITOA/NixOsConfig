@@ -8,5 +8,9 @@
     programs.wofi = {
       enable = true;
     };
+    applications.launcher = {
+      enable = true;
+      binary = "${pkgs.wofi}/bin/wofi --show drun";
+    };
   };
 }

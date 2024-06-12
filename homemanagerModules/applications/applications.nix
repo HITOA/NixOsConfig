@@ -7,5 +7,11 @@
         default = "";
       };
     };
+    launcher = {
+      enable = lib.mkEnableOption "Enable launcher.";
+      binary = lib.mkOption {
+        default = "";
+      };
+    };
   };
 }

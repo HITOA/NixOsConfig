@@ -9,6 +9,7 @@
   applications.codium.enable = true;
   applications.zellij.enable = true;
   applications.kitty.enable = true;
+  applications.vivaldi.enable = true;
 
   hyprland.enable = true;
   hyprland.binding.mainMod = "Control_L";
