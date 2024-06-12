@@ -56,6 +56,6 @@
       WLR_NO_HARDWARE_CURSORS = "1";
       #Hint Electron to use wayland
       NIXOS_OZONE_WL = "1";
-    }
+    };
   };
 }
