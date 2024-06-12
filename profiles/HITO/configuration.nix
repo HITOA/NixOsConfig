@@ -20,6 +20,8 @@
     efi.canTouchEfiVariables = true;
   };
 
+  polkit.enable = true;
+
   hardware.nvidia.enable = true;
 
   networking.hostName = "HITO";
