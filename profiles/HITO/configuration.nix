@@ -30,6 +30,7 @@
 
   environment.systemPackages = [
     pkgs.nh
+    pkgs.libgcc
   ];
 
   boot.loader = {
