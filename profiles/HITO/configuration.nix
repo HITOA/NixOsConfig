@@ -29,7 +29,6 @@
   ];
 
   environment.systemPackages = [
-    pkgs.git
     pkgs.nh
   ];
 
@@ -46,6 +45,7 @@
   compositor.hyprland.enable = true;
 
   applications.steam.enable = true;
+  applications.git.enable = true;
 
   xdg-portal.enable = true;
   polkit.enable = true;

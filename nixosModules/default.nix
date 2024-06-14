@@ -15,5 +15,6 @@
     ./compositor/hyprland.nix
     ./displaymanager/sddm.nix
     ./applications/steam.nix
+    ./applications/git.nix
   ];
 }
