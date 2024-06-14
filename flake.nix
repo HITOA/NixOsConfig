@@ -15,7 +15,7 @@
     };
 
     stylix = {
-      url = "github:danth/stylix";
+      url = "github:HITOA/stylix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         home-manager.follows = "home-manager";
