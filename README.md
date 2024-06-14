@@ -18,4 +18,4 @@ first run of startvm.sh use the -i argument
 - git clone repos . in /etc/nixos directory
 - run tools/generate-hardware-config.sh from repos root
 - git add the generated hardware-configuration
-- install with flake
+- install with flake (nixos-install --flake /mnt/etc/nixos#Profile)

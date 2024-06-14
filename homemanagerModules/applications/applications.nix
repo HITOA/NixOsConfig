@@ -13,5 +13,17 @@
         default = "";
       };
     };
+    explorer = {
+      enable = lib.mkEnableOption "Enable explorer.";
+      binary = lib.mkOption {
+        default = "";
+      };
+    };
+    wallpaper = {
+      enable = lib.mkEnableOption "Enable wallpaper.";
+      binary = lib.mkOption {
+        default = "";
+      };
+    };
   };
 }

@@ -8,5 +8,11 @@
     ./applications/ide/codium.nix
     ./applications/launcher/wofi.nix
     ./applications/browser/vivaldi.nix
+    ./applications/sound/pavucontrol.nix
+    ./applications/vesktop/vesktop.nix
+    ./applications/networking/nmapplet.nix
+    ./applications/passmanager/keepassxc.nix
+    ./applications/explorer/pcmanfm.nix
+    ./applications/wallpaper/swww.nix
   ];
 }
