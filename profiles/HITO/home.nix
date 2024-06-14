@@ -14,7 +14,7 @@
   applications.pavucontrol.enable = true;
   applications.nmapplet.enable = true;
   applications.keepassxc.enable = true;
-  applications.pcmanfm.enable = true;
+  applications.thunar.enable = true;
   applications.swww.enable = true;
   
   home.stateVersion = "24.05";

@@ -12,6 +12,8 @@
     ./applications/vesktop/vesktop.nix
     ./applications/networking/nmapplet.nix
     ./applications/passmanager/keepassxc.nix
+    ./applications/explorer/nemo.nix
+    ./applications/explorer/thunar.nix
     ./applications/explorer/pcmanfm.nix
     ./applications/wallpaper/swww.nix
   ];

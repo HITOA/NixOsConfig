@@ -11,7 +11,7 @@
 
     applications.explorer = {
         enable = true;
-        binary = "${pkgs.xfce.thunar}/bin/thunar";
+        binary = "${lib.getExe pkgs.xfce.thunar}";
     };
   };
 }

@@ -11,7 +11,7 @@
 
     applications.explorer = {
         enable = true;
-        binary = "${pkgs.pcmanfm}/bin/pcmanfm";
+        binary = "${lib.getExe pkgs.pcmanfm}";
     };
   };
 }
