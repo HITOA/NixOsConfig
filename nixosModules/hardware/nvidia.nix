@@ -5,21 +5,19 @@
   };
 
   config = lib.mkIf config.hardware.nvidia.enable {
-    hardware.opengl = {
+    hardware.graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
     };
 
-    services.xserver.videoDrivers = [ "nvidia" ];
+    services.xserver.videoDrivers = [ "amdgpu" "nvidia" ];
 
     hardware.nvidia = {
       modesetting.enable = true;
-      powerManagement.enable = false;
-      powerManagement.finegrained = false;
+      #powerManagement.enable = false;
+      #powerManagement.finegrained = false;
       open = false;
-      nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      nvidiaSettings = false;
     };
   };
 }

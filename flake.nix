@@ -3,27 +3,30 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/staging-24.05";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    musnix = {
+      url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:HITOA/stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-      };
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    temmix = {
+      url = "github:HITOA/temmix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, nur, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -37,7 +40,10 @@
         modules = [ 
           ./profiles/HITO/configuration.nix
           inputs.home-manager.nixosModules.default
-          inputs.stylix.nixosModules.stylix
+          inputs.musnix.nixosModules.musnix
+          inputs.temmix.nixosModules.temmix
+          #inputs.aagl.nixosModules.default
+          nur.modules.nixos.default
         ];
       };
       

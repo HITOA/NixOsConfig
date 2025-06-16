@@ -25,5 +25,11 @@
         default = "";
       };
     };
+    screenshot = {
+      enable = lib.mkEnableOption "Enable screenshot";
+      binary = lib.mkOption {
+        default = "";
+      };
+    };
   };
 }

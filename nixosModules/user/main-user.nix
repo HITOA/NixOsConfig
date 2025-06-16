@@ -13,7 +13,7 @@
   config = lib.mkIf config.mainUser.enable {
     users.users.${config.mainUser.username} = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
 
     home-manager = {

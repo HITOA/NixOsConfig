@@ -11,7 +11,7 @@
 
     applications.wallpaper = {
       enable = true;
-      binary = "swww-daemon & swww img ${nixosConfig.theme.wallpaper}";
+      binary = "swww-daemon";
     };
   };
 }

@@ -6,12 +6,12 @@
 
   config = lib.mkIf config.applications.nemo.enable {
     home.packages = [
-        pkgs.cinnamon.nemo
+        pkgs.nemo
     ];
 
     applications.explorer = {
         enable = true;
-        binary = "${lib.getExe pkgs.cinnamon.nemo}";
+        binary = "${lib.getExe pkgs.nemo}";
     };
   };
 }

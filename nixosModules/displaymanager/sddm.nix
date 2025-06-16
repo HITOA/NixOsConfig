@@ -8,15 +8,12 @@
   };
 
   config = lib.mkIf config.display-manager.sddm.enable {
-    services.xserver = {
-        enable = !config.display-manager.sddm.wayland.enable;
-        displayManager = {
-            sddm = {
-                enable = true;
-                wayland.enable = config.display-manager.sddm.wayland.enable;
-                theme = "${import ./sddm-theme.nix {inherit pkgs config;}}";
-            };
-        };
+    services.displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = config.display-manager.sddm.wayland.enable;
+        theme = "${import ./sddm-theme.nix {inherit pkgs config lib;}}";
+      };
     };
 
     environment.systemPackages = [

@@ -10,8 +10,21 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
+  boot.kernelPackages = pkgs.linuxPackages;
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.supportedFilesystems = [ "ntfs" ];
+
+  /*boot.kernelPatches = [
+    {
+      name = "amdgpu-ignore-ctx-privileges";
+      patch = pkgs.fetchpatch {
+        name = "cap_sys_nice_begone.patch";
+        url = "https://github.com/Frogging-Family/community-patches/raw/master/linux61-tkg/cap_sys_nice_begone.mypatch";
+        hash = "sha256-Y3a0+x2xvHsfLax/uwycdJf3xLxvVfkfDVqjkxNaYEo=";
+      };
+    }
+  ];*/
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/58dfdf58-ee2e-45c0-811c-8cac0f73ddf6";
